@@ -1,11 +1,13 @@
 console.log('item.js is linked');
-const itemLocation = document.querySelector('.item-location');
-
+const itemAddress = document.querySelector('.item-location');
+const itemLatitude = document.querySelector('.lat');
+const itemLongitude = document.querySelector('.long')
 
 var map, searchManager, address 
+var item_location = {}
 
 const reverseGeocode = function(e) {
-    itemLocation.value = '';
+    itemAddress.value = '';
     if (map.entities != []) {
         map.entities.clear();
     }
@@ -19,13 +21,20 @@ const reverseGeocode = function(e) {
     } else {
         
         var searchRequest = {
-                        // loca arguement to be passed in
+            // loca arguement to be passed in
             location: e.location,
             callback: function (res) {
                 //Tell the user the name of the result.
-                itemLocation.value = res.name;
-                item_latitude = res.location.latitude;
-                item_longitude = res.location.longitude;
+                const itemLocation = document.querySelector('.item-location')
+                itemAddress.value = res.name;
+                itemLatitude.value = res.location.latitude;
+                itemLongitude.value = res.location.longitude;
+                // item_location["latitude"] = res.location.latitude;
+                // item_location["longitude"] = res.location.longitude;
+                // item_location["address"] = res.name;
+                // // console.log(item_location)
+                // return item_location
+                
             },
             errorCallback: function (e) {
                 //If there is an error, alert the user about it.
@@ -37,7 +46,9 @@ const reverseGeocode = function(e) {
         searchManager.reverseGeocode(searchRequest);
         
         var pin = new Microsoft.Maps.Pushpin(e.location, {
-            title: address
+            // title: address
+            // color: 'green'
+            
         })
         map.entities.push(pin);
         console.log(map.entities)
@@ -55,3 +66,5 @@ function getMap() {
         reverseGeocode(e)
     })
 }
+
+    

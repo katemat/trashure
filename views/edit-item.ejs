@@ -3,32 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasure Item</title>
+    <title>Trashure Item</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript'
+    src='http://www.bing.com/api/maps/mapcontrol?callback=getMap&key=AuewOzxuyMxFiwOpCiEiYyNsck-yIwg3nBqGlLukoPc6gZm-v9Eiyw3eBGpPPTDw' 
+    async defer></script>
 </head>
 <body>
-    <h1>Update Item</h1>
+    <h1 class="form-h1">Update Item</h1>
     <div class="update-form-div">
-        <form class="update-form" action="">
+        <form class="update-form" action="/update/7" method="post">
+            <input type="hidden" name="_method" value="put">
             <div>
-                <label for="">Title: </label>
-                <input type="text" class="title">
+                <label for="">Name: </label>
+                <input type="text" class="item-name" name="name" value="<%=item.name%>">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Item type: </label>
+                <select name="item_type" id="">
+                    <option value="">Select type</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="book">Book</option>
+                    <option value="food">Food</option>
+                    <option value="ticket">Ticket</option>
+                    <option value="ticket">Others</option>
+                </select>
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Place the pin where the item is located</label>
+                <input type="text" class="item-location" name="address">
+                <input type="hidden" name="latitude" class="lat">
+                <input type="hidden" name="longitude" class="long">
+                <div class="item-map"></div>
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Image URL</label>
+                <input type="text" class="image-url" name="image_url">
+            </div>
+            <div>
+                <label for="">Pick up Date</label>
+                <input type="date" class="pickup-date" name="pickup_date">
+            </div>
+            <div>
+                <label for="">Pick up Time, from</label>
+                <input type="time" class="pickup_start_time" name="pickup_start_time">
+            </div>
+            <div>
+                <label for="">Pick up Time, to</label>
+                <input type="time" class="pickup_end_time" name="pickup_end_time">
             </div>
             <button class="update-item-btn">Submit Changes</button> 
         </form>
     </div>
-    <script src=""></script>
+    <script src="/item.js"></script>
 </body>
 </html>
 

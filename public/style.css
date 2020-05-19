@@ -4,20 +4,21 @@
 
 .item-map {
     height: 300px;
+    margin: 10px;
 }
 
 body {
     background-color: mistyrose;
 }
 
-.create-form-div {
+.create-form-div, .update-form-div {
     border: 1px solid grey;
     border-radius: 8px;
     text-align: center;
     margin: 50px;
 }
 
-.create-form {
+.create-form, .update-form {
     margin: 20px;
     padding: 20px auto;
 }
@@ -32,6 +33,6 @@ body {
     width: 200px;
 }
 
-.create-h1 {
+.form-h1 {
     text-align: center;
 }
