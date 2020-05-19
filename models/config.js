@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 const pool = new pg.Pool({
-    database: ' '
+    database: 'trashure'
 })
 
 module.exports = {

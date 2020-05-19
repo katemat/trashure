@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Trasure Item</title>
 </head>
 <body>
     <h1>Update Item</h1>
     <div class="update-form-div">
-        <form action="">
+        <form class="update-form" action="">
             <div>
-                <label for="">Title: </label>
-                <input type="text" class="title">
+                <label for="">Name </label>
+                <input type="text" class="item-name" required value="<%= %>">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Adrress Line</label>
+                <input type="text" class="item-addres-line" required value="<%= %>">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">State</label>
+                <input type="text" class="item-state" required value="<%= %>">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Post Code</label>
+                <input type="text" class="item-post-code" required value="<%= %>">
+            </div>
+            <div>
+                <label for="">Image URL</label>
+                <input type="text" class="img-url" required value="<%= %>">
+            </div>
+            <div>
+                <label for="">Pickup Date: </label>
+                <input type="date" class="pick-up-date" required value="<%= %>">
+            </div>
+            <div>
+                <label for="">Pickup time, from: </label>
+                <input type="text" class="pick-up-time-from" required value="<%= %>">
+            </div>
+            <div>
+                <label for="">Pickup time, to: </label>
+                <input type="text" class="pick-up-time-to" required value="<%= %>">
             </div>
             <button class="update-item-btn">Submit Changes</button> 
         </form>
