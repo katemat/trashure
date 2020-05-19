@@ -1,7 +1,28 @@
 #map {
 
     height: 300px
+}
+
 body{
     background-color: mistyrose;
+}
 
+.create-form-div {
+    border: 1px solid grey;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.create-form {
+    margin: 20px;
+}
+
+.create-form label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.create-form input {
+    width: 200px;
 }
