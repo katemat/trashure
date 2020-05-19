@@ -19,6 +19,14 @@ app.get('/myitems', (req,res)=>{
     res.render('view-my-items')
 })
 
+app.get('/new', (req, res) => {
+    res.render('new-item')
+})
+
+app.post('/new', (req,res) => {
+    
+})
+
 app.listen(port, () => {
     console.log(`listening on ${port}`)
 })

@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trasure Item</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript'
+    src='http://www.bing.com/api/maps/mapcontrol?callback=getMap&key=AuewOzxuyMxFiwOpCiEiYyNsck-yIwg3nBqGlLukoPc6gZm-v9Eiyw3eBGpPPTDw' 
+    async defer></script>
 </head>
 <body>
-    <h1>Create New Item</h1>
-    <div class="create-from-div">
-        <form action="">
+    <h1 class="create-h1">Create New Item</h1>
+    <div class="create-form-div">
+        <form class="create-form" action="/new" method="post">
             <div>
                 <label for="">Title: </label>
                 <input type="text" class="title">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Place the pin where the item is located</label>
+                <input type="text" class="item-location">
+                <div class="item-map"></div>
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Image URL</label>
+                <input type="text" class="img-url">
             </div>
             <div>
-                <label for=""> </label>
-                <input type="text" class="">
+                <label for="">Pick up Date</label>
+                <input type="text" class="pickup-date">
             </div>
-            <button class="create-item-btn">Create</button> 
+            <div>
+                <label for="">Pick up Time, from</label>
+                <input type="text" class="pickup-date">
+            </div>
+            <div>
+                <label for="">Pick up Time, to</label>
+                <input type="text" class="pickup-date">
+            </div>
+            <button class="create-item-btn">Publish the Item</button> 
         </form>
     </div>
-    <script src=""></script>
+    <script src="/item.js"></script>
 </body>
 </html>
